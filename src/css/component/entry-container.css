@@ -1,0 +1,205 @@
+/* =====Start Body Entry container===== */
+
+/* =====Start Button +New: use it to create a new entry===== */
+.new-btn-container {
+  display: flex;
+  justify-content: end;
+}
+.new-btn-container:hover {
+  opacity: 0.8;
+}
+.btn-new {
+  background: #000;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+/* =====End Button +New===== */
+
+/* =====Start Entry container: for this style apply for when we create a new entry, edit with view and delete===== */
+.main-scope-container {
+  flex-grow: 1;
+}
+.create-entry-container {
+  margin-top: var(--margin-top-ten);
+}
+.main-container {
+  display: grid;
+  grid-template-columns: 250px 3fr;
+  gap: var(--spacing-gap);
+}
+.main-entry {
+  margin-top: var(----main-entry-margin-top);
+}
+/* Main entries container: all entries after create will appended to this scope */
+#entries-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-gap);
+  margin-top: var(----main-entry-margin-top);
+}
+.entry-to-container > div {
+  font-size: var(--font-small);
+}
+.entry {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #faeed1;
+  color: var(--link-color);
+  height: 198px;
+}
+
+/* Line in entry */
+hr {
+  height: 0px;
+  border: none;
+  border-top: 1px solid #c7c8cc;
+}
+.entry-to-container {
+  padding: 10px;
+}
+
+/* Entry title container */
+.entry-title {
+  text-align: center;
+  background: var(--bg-entry-color);
+  height: 40px;
+}
+
+/* Entry title in entry container */
+.entry-title h3 {
+  font-size: var(--font-small);
+  color: var(--color-dark-blue);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-transform: capitalize;
+}
+
+/* Entry content in entry container*/
+.entry-to-container p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+/* Edit and Delete container in entry container*/
+.btn-edit-delete-container {
+  display: flex;
+  justify-content: end;
+}
+
+/* Edit Buuton in entry container*/
+.edit-btn {
+  color: var(--color-dark-blue);
+}
+
+/* Delete Button in entry container*/
+.delete-btn {
+  color: var(--color-dark-red);
+}
+
+/* =====End Entry container===== */
+
+/* =====Start Popup form: it loads when we click on new button===== */
+.main-form {
+  display: none;
+  position: fixed;
+  top: 110px;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main form of popup*/
+#form-popup {
+  z-index: 10000;
+}
+#form-popup.show {
+  display: flex;
+}
+#form-popup.bg-blur {
+  display: flex;
+}
+
+/*Sub form of popup*/
+#diary-form {
+  width: 60%;
+  display: flex;
+  height: 80%;
+  background: var(--color-white);
+  flex-direction: column;
+  border-radius: var(--border-radius-ten);
+}
+
+/* Inside has date, content, title */
+.info-container {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 15px;
+  gap: var(--spacing-gap);
+}
+
+/* Entry date of form popup*/
+#date {
+  color: var(--color-dark-blue);
+  width: 120px;
+}
+
+/* Entry title of form popup*/
+#title {
+  font-size: var(--font-large);
+  color: var(--color-dark-blue);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-transform: capitalize;
+}
+
+/* Entry content of form popup*/
+#content {
+  font-size: var(--font-small);
+  height: 300px;
+  width: 100%;
+  resize: none;
+}
+
+/* Button container in form popup */
+.btn-container-popup {
+  display: flex;
+  gap: var(--spacing-gap);
+  margin-top: var(--margin-top);
+}
+
+/* Create and Cancel button in form popup */
+#submit-button,
+#cancel-button {
+  background: var(--color-dark-blue);
+  color: var(--color-white);
+  padding: 10px;
+  border-radius: var(--border-radius-ten);
+}
+#cancel-button {
+  background: var(--color-dark-red);
+}
+/* =====End Popup form===== */
+
+/* Responsive for footer */
+@media screen and (max-width: 767px) {
+  .main-container {
+    grid-template-columns: 0px 3fr;
+    gap: 0;
+  }
+  #title,
+  #content {
+    font-size: var(--font-small);
+  }
+}
+
+/* =====End Body Entry container===== */

@@ -1,0 +1,62 @@
+/* Start about us container */
+.main-about-us {
+  padding-top: var(--padding-large);
+  padding-bottom: var(--padding-large);
+}
+/* In the about us page it doesn't have a side bar when large screen and for small screen it will display when click on menu bar button */
+.hide-side-bar {
+  display: none;
+}
+/* For all odd child in about us content will have this color below */
+.article-about-us:nth-child(odd) > .about-content {
+  background: var(--about-us-odd-color);
+}
+/* For all even child in about us content will have this color below */
+.article-about-us:nth-child(even) > .about-content {
+  background: var(--about-us-even-color);
+}
+/* Change the position of even child to end of parent */
+.article-about-us:nth-child(even) > h1 {
+  display: flex;
+  justify-content: end;
+}
+/* It work inside main content that grid 2 column one for image or another one for descritive */
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding: var(--padding-ml);
+  gap: var(--spacing-gap);
+  margin-bottom: 20px;
+}
+/* Set width to main container of image */
+.about-us-image-container {
+  min-width: 300px;
+}
+.about-us-image-container > img {
+  width: 100%;
+}
+.article-about-us > h1 {
+  font-size: var(--font-large);
+}
+.about-us-des > p {
+  font-size: 1.5vw;
+}
+/* Responsive */
+@media screen and (max-width: 767px) {
+  .hide-side-bar {
+    display: flex;
+  }
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about-us-des > p {
+    font-size: var(--font-small);
+  }
+  .article-about-us:nth-child(even) > h1 {
+    display: flex;
+    justify-content: start;
+  }
+}
+/* End about us container */

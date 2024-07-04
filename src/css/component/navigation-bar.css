@@ -1,0 +1,112 @@
+/* =====Start Navigation Bar===== */
+.header,
+.header1 {
+  background: var(--bg-main-color);
+}
+.header1 {
+  border-radius: 8px 8px 0 0;
+}
+.navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation-bar h1 {
+  display: none;
+}
+
+/* =====Start Navigation bar left===== */
+.navigation-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-gap);
+}
+
+/* Nav bar left logo */
+.logo {
+  width: 60px;
+}
+.logo img {
+  width: 100%;
+}
+
+/* Menu-bar-icon left */
+.menu-bar-icon {
+  display: none;
+  color: var(--color-dark-blue);
+}
+.menu-bar {
+  font-size: 40px;
+}
+/* =====End Navigation bar left===== */
+
+/* =====Start Navigation menu container===== */
+.navigation-menu {
+  display: flex;
+  gap: var(--spacing-gap);
+  color: var(--color-dark-blue);
+}
+/* =====End Navigation menu container===== */
+
+/* =====Start Navigation right container===== */
+.navigation-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-gap);
+}
+
+/* Search on nav bar main container */
+.search-container {
+  display: flex;
+  gap: (--spacing-gap);
+  align-items: center;
+  width: 140px;
+  height: 47px;
+  border-radius: var(--border-radius-medium);
+  background: var(--color-white);
+}
+
+/* Search icon button */
+.search-btn {
+  height: 47px;
+  width: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--icon-search);
+  background: var(--icon-search-bg);
+}
+
+/* Search Title */
+.search-title {
+  color: #686363;
+  font-size: var(--font-small);
+}
+
+/* Person Icon */
+.navigation-right > a {
+  color: var(--color-white);
+}
+/* =====End Navigation right container===== */
+
+/* Responsive of Navigation Bar */
+@media screen and (max-width: 767px) {
+  .navigation-bar h1 {
+    display: flex;
+  }
+  .navigation-left h3 {
+    display: none;
+  }
+  .navigation-right {
+    display: none;
+  }
+  .navigation-menu {
+    display: none;
+  }
+  .menu-bar-icon {
+    display: flex;
+  }
+}
+
+/* =====End Navigation Bar===== */

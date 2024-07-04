@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dynamic Calendar JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="../src/css/index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font Link for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <!-- Start Background blur -->
+    <div class="background-blur bg-blur"></div>
+    <!-- End Background blur -->
+
+    <!-- =====Start body container: this use to scope all important container in body===== -->
+    <section class="body-container">
+      <!-- =====Start Navigation bar: it is a navigation bar component===== -->
+      <navigation-bar-component
+        data-source="nav-bar-menu-data"
+      ></navigation-bar-component>
+      <!-- =====End Navigation bar===== -->
+
+      <!-- =====Start scope container: use to scope new button, side bar, entries-container===== -->
+      <main class="main-scope-container">
+        <section class="main-container container-max-width">
+          <!-- =====Start Side bar: create it as a dashboard===== -->
+          <side-bar-component data-source="side-bar-data"></side-bar-component>
+          <!-- =====End Side bar===== -->
+
+          <!-- =====Start calendar container: it works for showing only calendar===== -->
+          <section class="calendar-container">
+            <section class="calendar-header">
+              <p class="current-date"></p>
+              <div class="icons">
+                <span id="prev" class="material-symbols-rounded"
+                  >chevron_left</span
+                >
+                <span id="next" class="material-symbols-rounded"
+                  >chevron_right</span
+                >
+              </div>
+            </section>
+            <div class="main-calendar">
+              <calendar-component data-source="date-data"> </calendar-component>
+              <!-- =====End calendar container===== -->
+              <ul class="days"></ul>
+            </div>
+          </section>
+        </section>
+      </main>
+      <!-- =====End scope container===== -->
+
+      <!-- =====Start Footer===== -->
+      <footer-component data-source="footer-data"> </footer-component>
+      <!-- =====End Footer===== -->
+    </section>
+    <!-- =====End body container===== -->
+  </body>
+  <!-- Import JavaScript file for a calendar in this website -->
+  <script src="../src/js/calendar.js"></script>
+  <!-- Import JavaScript file for a functionality file in this website -->
+  <script src="../src/js/main.js"></script>
+  <!-- Import link navigation bar component -->
+  <script type="module" src="../src/js/component/nav-bar-component.js"></script>
+  <!-- Import link side bar component -->
+  <script
+    type="module"
+    src="../src/js/component/side-bar-component.js"
+  ></script>
+  <!-- Import Calendar component -->
+  <script
+    type="module"
+    src="../src/js/component/calendar-component.js"
+  ></script>
+  <!-- Import link footer component -->
+  <script type="module" src="../src/js/component/footer-component.js"></script>
+</html>

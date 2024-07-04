@@ -1,0 +1,74 @@
+/* =====Start Side Bar===== */
+
+/* Main side bar */
+.side-bar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 208px;
+  background: var(--side-bar-bg);
+  top: 120px;
+  left: 50px;
+  padding: var(--padding-ml);
+  line-height: 4rem;
+  transform: translateX(0);
+  transition: all 0.1s ease-in;
+  margin-top: var(--margin-top-ten);
+  z-index: 100;
+  border-radius: var(--border-radius-ten);
+}
+
+/* App container in side bar */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app-image {
+  width: 80px;
+  border-radius: var(--radius-circle);
+}
+.app-image > img {
+  width: 100%;
+}
+/* Menu list in side bar  */
+.side-bar-list > a > div {
+  display: flex;
+  gap: var(--spacing-gap);
+  color: var(--color-dark-blue);
+  align-items: center;
+}
+.menu-side-bar .side-bar-list:nth-child(3),
+.side-bar-list:nth-child(5) {
+  margin-top: var(--margin-top);
+}
+
+/* last child of menu list in side bar */
+.menu-side-bar .side-bar-list:nth-child(6) div {
+  color: var(--color-dark-red);
+}
+
+/* Button close will show when Sidebar breakpoint display */
+.close-button {
+  display: none;
+  justify-content: end;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+/* Responsive for Side bar */
+@media screen and (max-width: 767px) {
+  .side-bar {
+    transform: translateX(-100%);
+    left: 0;
+  }
+  .side-bar.open-sideBar {
+    transform: translateX(0);
+    left: 50px;
+  }
+  .close-button {
+    display: flex;
+  }
+}
+/* =====End Side Bar===== */

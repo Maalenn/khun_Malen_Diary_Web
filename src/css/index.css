@@ -1,0 +1,145 @@
+/* Font style */
+@import url("https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/* Import Navigation Bar component style link */
+@import url("./component/navigation-bar.css");
+/* Import Navigation Bar component style link */
+@import url("./component/sidebar.css");
+/* Import Entry container component style link */
+@import url("./component/entry-container.css");
+/* Import Footer component style link */
+@import url("./component/footer.css");
+/* Import Calendar style link */
+@import url("./calendar.css");
+/* Import contact style link */
+@import url("./contact-us.css");
+/* Import About Us style link*/
+@import url("./about-us.css");
+/* =====Start style Guide: use for make a guide line that use in the project such as color, padding, margin, gap =====*/
+:root {
+  /* For font */
+  --font-style: "Andika", sans-serif;
+  --font-small: 16px;
+  --font-large: 32px;
+  /* For Gap */
+  --spacing-gap: 2rem;
+  /* For color and backgroun-color */
+  --color-dark-blue: #2c4759;
+  --color-white: white;
+  --icon-search-bg: #e9e9e9;
+  --bg-main-color: rgb(236, 177, 118);
+  --side-bar-bg: #ead8c0;
+  --color-dark-red: #941313;
+  --bg-entry-color: #ded0b6;
+  --popup-text-color: #c7c8cc;
+  --calendar-bg: #f8f4e1;
+  --about-us-odd-color: #e0fbe2;
+  --about-us-even-color: #caf4ff;
+  /* For border radius */
+  --radius-circle: 100%;
+  --border-radius-medium: 30px;
+  --border-radius-ten: 10px;
+  /* For padding */
+  --padding-button: 5px;
+  --padding-ml: 15px;
+  --padding-large: 40px;
+  --padding-center: 0 50px;
+  --icon-search: 20px 0 0 20px;
+  /* For Margin */
+  --margin-top: 40px;
+  --margin-top-high: 50px;
+  --margin-top-ten: 10px;
+  --main-entry-margin-top: 13px;
+}
+/* =====End Guide Line===== */
+
+/* We set font-size: 62.5%: use for set 1rem to 10px , as normally 1rem equal 16px */
+html {
+  font-size: 62.5%;
+}
+
+/* Use * to set the global with padding 0, margin = 0, box-sizing: border-box */
+*,
+*::after,
+*::after {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Set a default style og Button */
+button {
+  cursor: pointer;
+  background: none;
+}
+
+/* Font use in the whole project */
+body {
+  font-family: var(--font-style);
+}
+
+/* list-style-type: use to change a default list style of ul to none */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+a,
+li,
+p {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.6rem;
+  margin: 0;
+  font-weight: 490;
+}
+
+/* Remove outline when focus on textarea and input */
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+/* =====Start Main contanier: use to scope all body code===== */
+.body-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* =====End Main contanier: use to scope all body code===== */
+
+/* Container max width: use it for set a size of screen in my website */
+.container-max-width {
+  max-width: 100%;
+  padding: var(--padding-center);
+}
+
+/* Main contanier of side bar container and entries container */
+.main-container {
+  margin-top: var(--margin-top-ten);
+}
+
+/* Backgroud blur style */
+.background-blur {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(35, 33, 33, 0.2);
+  backdrop-filter: blur(2px);
+  z-index: 90;
+}
+
+/* Disable blur background when side bar break point or form popup not yet show */
+.background-blur.bg-blur {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Visible scroll when side bar break point or form popup not yet show */
+html {
+  overflow-y: scroll;
+}
+
+/* Disable scroll when side bar break point or form popup show */
+html.overflow-y-hidden {
+  overflow-y: hidden;
+}

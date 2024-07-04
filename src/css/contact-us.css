@@ -1,0 +1,30 @@
+/* For the main container of contact page */
+.developer-container {
+  max-width: 900px;
+  height: 400px;
+  border-radius: var(--border-radius-ten);
+  margin-top: var(--margin-top-high);
+  padding: var(--padding-default);
+}
+.info-title {
+  color: var(--color-dark-blue);
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  padding: var(--padding-large);
+}
+.info-developer {
+  display: flex;
+  gap: var(--spacing-gap);
+  align-items: center;
+  border-top: 1px solid var(--popup-text-color);
+  border-bottom: 1px solid var(--popup-text-color);
+  padding: var(--padding-ml);
+  color: var(--color-dark-blue);
+}
+/* Responsive */
+@media screen and (max-width: 767px) {
+  .info-title {
+    font-size: 25px;
+  }
+}
