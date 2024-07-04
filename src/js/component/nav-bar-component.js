@@ -18,8 +18,8 @@ const NavigationBarContainer = (menuContents) => {
                 </button>
                     <h1>Diary Website Application</h1>
                 <div class="navigation-left">
-                    <a href="/khunmalen-diary-web/index.html" class="logo">
-                        <img src="/khunmalen-diary-web/src/image/logo.png" alt="" />
+                    <a href="/index.html" class="logo">
+                        <img src="/src/image/logo.png" alt="" />
                     </a>
                     <h3>Diary Website Application</h3>
                 </div>
@@ -39,7 +39,7 @@ const NavigationBarContainer = (menuContents) => {
                         </button>
                         <div class="search-title">Search...</div>
                     </div>
-                    <a href="/khunmalen-diary-web/public/contact-us.html"><span class="material-symbols-outlined">person</span></a>
+                    <a href="/public/contact-us.html"><span class="material-symbols-outlined">person</span></a>
                 </section>
             </nav>
         </header>

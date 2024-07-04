@@ -11,7 +11,7 @@ const FormPopupEntryContainer = () => {
                     <nav class="navigation-bar container-max-width">
                         <div class="navigation-left">
                             <div class="logo">
-                                <img src="/khunmalen-diary-web/src/image/logo.png" alt="Logo" />
+                                <img src="/src/image/logo.png" alt="Logo" />
                             </div>
                             <h2>Diary Website Application</h2>
                         </div>
